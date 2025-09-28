@@ -136,10 +136,19 @@ h1 {
   gap: 15px;
 }
 
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;      /* permite varias filas si hay muchas fotos */
+  justify-content: center;
+  gap: 15px;            /* espacio entre imágenes */
+  margin: 20px 0;
+}
+
 .imagenes img {
-  max-width: 200px;  /* límite de ancho */
-  width: 100%;       /* ocupa todo el espacio disponible */
-  height: auto;      /* mantiene proporción original */
+  max-width: 100%;       /* nunca se sale del contenedor */
+  max-height: 300px;     /* límite de altura */
+  width: auto;           /* mantiene proporción */
+  height: auto;          /* mantiene proporción */
   border-radius: 15px;
   border: 3px solid #ff1a1a;
   box-shadow: 0 0 15px rgba(255,0,0,0.6);
@@ -147,13 +156,8 @@ h1 {
 }
 
 .imagenes img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 0 25px rgba(255,0,0,0.9);
 }
 
-
-
-.imagenes img:hover {
-  transform: scale(1.08);
-}
 
