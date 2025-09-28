@@ -184,11 +184,47 @@ header .logo {
     <h2>Cartita para la mujer que amo muchísimo 💌</h2>
   <!-- Música de fondo -->
   <audio id="musica" autoplay loop>
-    <source src="Amore - BABYMETAL.mp3" type="audio/mpeg">
-  </audio>
+  <!-- Música de fondo -->
+<audio id="musica" autoplay loop>
+  <source src="Amore - BABYMETAL.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- Botón de música -->
-  <button id="btnPlay" class="btn-musica">▶️</button>
+<!-- Botones -->
+<button id="btnPlay" class="btn-musica">⏸️</button>
+<button id="btnNext" class="btn-musica">⏭️</button>
+
+<script>
+  const musica = document.getElementById("musica");
+  const btnPlay = document.getElementById("btnPlay");
+  const btnNext = document.getElementById("btnNext");
+
+  // Canciones
+  const canciones = [
+    "Amore - BABYMETAL.mp3",
+    "Smithereens - Twenty One Pilots.mp3"
+  ];
+  let indice = 0;
+
+  // Play / Pause
+  btnPlay.onclick = () => {
+    if (musica.paused) {
+      musica.play();
+      btnPlay.textContent = "⏸️";
+    } else {
+      musica.pause();
+      btnPlay.textContent = "▶️";
+    }
+  };
+
+  // Next
+  btnNext.onclick = () => {
+    indice = (indice + 1) % canciones.length;
+    musica.src = canciones[indice];
+    musica.play();
+    btnPlay.textContent = "⏸️";
+  };
+</script>
+
 
     <p><p>𝕸𝖎 𝖆𝖒𝖆𝖉𝖆 𝕷𝖚𝖈í𝖆: <br>
 𝕰𝖓 𝖊𝖘𝖙𝖆 𝖈𝖊𝖑𝖊𝖇𝖗𝖆𝖈𝖎ó𝖓 𝖙𝖆𝖓 𝖊𝖘𝖕𝖊𝖈𝖎𝖆𝖑 𝖖𝖚𝖎𝖊𝖗𝖔 𝖈𝖔𝖒𝖊𝖓𝖟𝖆𝖗 𝖊𝖘𝖙𝖆 𝖈𝖆𝖗𝖙𝖆 𝖕𝖆𝖗𝖆 𝖉𝖊𝖈𝖎𝖗𝖙𝖊, 𝖉𝖊𝖘𝖉𝖊 𝖑𝖔 𝖒á𝖘 𝖕𝖗𝖔𝖋𝖚𝖓𝖉𝖔 𝖉𝖊 𝖒𝖎 𝖈𝖔𝖗𝖆𝖟ó𝖓, 𝖈𝖚á𝖓𝖙𝖔 𝖙𝖊 𝖆𝖌𝖗𝖆𝖉𝖊𝖟𝖈𝖔 𝖕𝖔𝖗 𝖙𝖔𝖉𝖔 𝖊𝖘𝖙𝖊 𝖙𝖎𝖊𝖒𝖕𝖔 𝖖𝖚𝖊 𝖒𝖊 𝖍𝖆𝖘 𝖍𝖊𝖈𝖍𝖔 𝖙𝖆𝖓 𝖋𝖊𝖑𝖎𝖟. 𝕿𝖊 𝖉𝖊𝖉𝖎𝖈𝖔 𝖊𝖘𝖙𝖆𝖘 𝖕𝖆𝖑𝖆𝖇𝖗𝖆𝖘 𝖈𝖔𝖓 𝖚𝖓𝖆 𝖒𝖚𝖘𝖎𝖖𝖚𝖎𝖙𝖆 𝖉𝖊 𝕭𝖆𝖇𝖞𝖒𝖊𝖙𝖆𝖑, 𝖊𝖘𝖆 𝖇𝖆𝖓𝖉𝖆 𝖖𝖚𝖊 𝖙𝖆𝖓𝖙𝖔 𝖙𝖊 𝖌𝖚𝖘𝖙𝖆, 𝖕𝖆𝖗𝖆 𝖖𝖚𝖊 𝖓𝖔𝖘 𝖆𝖈𝖔𝖒𝖕𝖆ñ𝖊 𝖒𝖎𝖊𝖓𝖙𝖗𝖆𝖘 𝖑𝖆𝖘 𝖑𝖊𝖊𝖘.</p>
@@ -227,11 +263,11 @@ header .logo {
 
 
   <!-- Corazones flotantes -->
-  <div class="decoracion" style="left:10%; animation-delay:0s;">❤️</div>
-  <div class="decoracion" style="left:30%; animation-delay:2s;">🖤</div>
-  <div class="decoracion" style="left:60%; animation-delay:4s;">❤️</div>
-  <div class="decoracion" style="left:80%; animation-delay:6s;">🖤</div>
-  <div class="decoracion" style="left:50%; animation-delay:3s;">❤️</div>
+<div class="decoracion" style="left: 10%; animation-delay: 0s;">❤️</div>
+<div class="decoracion" style="left: 30%; animation-delay: 2s;">🖤</div>
+<div class="decoracion" style="left: 50%; animation-delay: 4s;">❤️</div>
+<div class="decoracion" style="left: 70%; animation-delay: 6s;">🖤</div>
+<div class="decoracion" style="left: 90%; animation-delay: 8s;">❤️</div>
 
   <script>
     const musica = document.getElementById("musica");
