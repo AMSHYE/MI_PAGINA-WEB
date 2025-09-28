@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Para la novia mas hermosa</title>
+  <title>Para la novia más hermosa</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,6 +15,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
     header {
@@ -31,19 +32,20 @@
       color: #333;
     }
 
-    .noticia {
+    .carta {
       background: #fff;
-      max-width: 600px;
-      padding: 25px;
+      max-width: 700px;
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 15px rgba(0,0,0,0.2);
       position: relative;
       overflow: hidden;
       animation: aparecer 2s ease-in-out;
+      line-height: 1.6;
+      text-align: justify;
     }
 
-    /* Borde animado */
-    .noticia::before {
+    .carta::before {
       content: "";
       position: absolute;
       top: -2px; left: -2px;
@@ -65,15 +67,19 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
-    .adornos {
-      margin-top: 15px;
-      font-size: 1.8rem;
-      animation: saltar 2s infinite;
+    /* Corazones flotando */
+    .corazon {
+      position: absolute;
+      font-size: 24px;
+      color: #ff4d6d;
+      animation: flotar 8s infinite;
+      opacity: 0.7;
     }
 
-    @keyframes saltar {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+    @keyframes flotar {
+      0% { transform: translateY(100vh) scale(1); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
     }
 
     /* Botón animado */
@@ -103,15 +109,29 @@
 </head>
 <body>
   <header>
-    <h1>♡♡Felices 3 meses de novios♡♡</h1>
+    <h1>♡♡ Felices 3 meses, mi amor ♡♡</h1>
   </header>
 
-  <div class="noticia">
-    <h2>Cartita para la mujer que amo muchisimo y daríami vida por ella</h2>
+  <div class="carta">
+    <h2>Para mi Lucía, mi gran amor</h2>
     <p>
-      Hoy se celebró un acontecimiento muy importante que reunió a cientos de personas...
+      En esta celebración tan especial quiero comenzar esta carta para agradecerte por todo este tiempo en el que me has hecho tan feliz. Te dedico estas palabras con una musiquita de Babymetal, que sé cuánto te gusta, para que nos acompañe mientras lees.
     </p>
-    <div class="adornos">✨🌸🎶</div>
+    <p>
+      Estos tres meses han sido los más hermosos de mi vida. Me has mostrado tu confianza, tu amor, tus virtudes y hasta esos defectos que tú dices tener, pero que a mí me enamoran más cada día. A pesar de tus heridas y tus momentos difíciles, yo te elijo hoy, ayer y siempre. No cambiaría nada de ti porque todo lo que eres, con tus luces y tus sombras, es lo que te hace única y preciosa.
+    </p>
+    <p>
+      Gracias por darme la oportunidad de demostrarte que puedo ser diferente a quienes te hicieron daño en el pasado. Yo, como tu pareja y protector, te prometo cuidarte toda la vida. Me enamoras con tu sonrisa, con tu esfuerzo diario por ser mejor y con tu valentía para seguir adelante. Estoy orgulloso de ti, de tu fuerza y de cada paso que das.
+    </p>
+    <p>
+      No sabes lo feliz que soy de tenerte a mi lado. Gracias infinitas por no soltarme cuando más lo necesitaba. Eres una gran novia, hija, amiga, estudiante y compañera. Siempre estaré para ti, como tú lo has estado para mí. Estos tres meses me han parecido eternos porque he disfrutado cada instante; antes de conocerte, sentía que el tiempo se me escapaba en vano, pero contigo quiero empezar de nuevo mi vida.
+    </p>
+    <p>
+      Te amo tanto, Lucía, que le pido a Dios salud y fuerza para ambos, para que un día podamos vivir juntos y felices. Te amo aquí, hasta la luna a paso de caracol. Eres mi único y verdadero amor, mi solecito, mi niña preciosa, y prometo protegerte siempre.
+    </p>
+    <p>
+      Te amo tanto como Zenitsu ama a Nezuko, como Iguro ama a Mitsuri, como Hakuji ama a Koyuki, como Rakan ama a Xayah, como Kaneki ama a Touka… Te amo más que todo eso y mucho más. Te amo, Lucía. Te amo, te amo, te amo. ♡♡♡
+    </p>
   </div>
 
   <!-- Música de fondo -->
@@ -122,6 +142,13 @@
   <!-- Botón con animación -->
   <button id="btnPlay" class="btn-musica">▶️</button>
 
+  <!-- Corazones flotando -->
+  <span class="corazon" style="left:10%; animation-delay:0s;">❤️</span>
+  <span class="corazon" style="left:30%; animation-delay:2s;">💖</span>
+  <span class="corazon" style="left:50%; animation-delay:4s;">💕</span>
+  <span class="corazon" style="left:70%; animation-delay:6s;">💓</span>
+  <span class="corazon" style="left:90%; animation-delay:3s;">💘</span>
+
   <script>
     const musica = document.getElementById("musica");
     const btnPlay = document.getElementById("btnPlay");
@@ -129,10 +156,10 @@
     btnPlay.addEventListener("click", () => {
       if (musica.paused) {
         musica.play();
-        btnPlay.textContent = "⏸️"; // cambia icono
+        btnPlay.textContent = "⏸️"; 
       } else {
         musica.pause();
-        btnPlay.textContent = "▶️"; // cambia icono
+        btnPlay.textContent = "▶️"; 
       }
     });
   </script>
