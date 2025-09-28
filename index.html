@@ -10,7 +10,7 @@
       margin: 0;
       padding: 20px;
       text-align: center;
-      scroll-behavior: smooth; /* desplazamiento suave */
+      scroll-behavior: smooth;
     }
 
     header {
@@ -28,22 +28,21 @@
       color: #333;
     }
 
-    .noticia {
+    .carta {
       background: #fff;
       max-width: 700px;
-      padding: 25px;
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 15px rgba(0,0,0,0.2);
       margin: 40px auto;
       position: relative;
       overflow: hidden;
-      animation: aparecer 2s ease-in-out;
-      line-height: 1.6;
+      line-height: 1.7;
       text-align: justify;
+      animation: aparecer 2s ease-in-out;
     }
 
-    /* Borde animado */
-    .noticia::before {
+    .carta::before {
       content: "";
       position: absolute;
       top: -2px; left: -2px;
@@ -77,7 +76,6 @@
       50% { transform: translateY(-5px); }
     }
 
-    /* Botón animado */
     .btn-musica {
       margin: 30px auto;
       background: #ff6a00;
@@ -104,7 +102,6 @@
       transform: scale(0.95);
     }
 
-    /* Decoraciones flotantes */
     .decoracion {
       position: fixed;
       font-size: 2rem;
@@ -118,30 +115,39 @@
       30% { opacity: 1; }
       100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
     }
+
   </style>
 </head>
 <body>
+
   <header>
     <h1>♡♡ Felices 3 meses de novios ♡♡</h1>
   </header>
 
-  <div class="noticia">
+  <div class="carta">
     <h2>Cartita para la mujer que amo muchísimo 💌</h2>
-    <p>
-      Mi amada Lucía:
-En esta celebración tan especial quiero comenzar esta carta para decirte, desde lo más profundo de mi corazón, cuánto te agradezco por todo este tiempo que me has hecho tan feliz. Te dedico estas palabras con una musiquita de Babymetal, esa banda que tanto te gusta, para que nos acompañe mientras las lees.
-Quiero agradecerte por estos tres meses juntos, que para mí han sido los más hermosos del mundo. En este tiempo me has mostrado muchas facetas de ti: tu confianza, tu amor, tus bellas virtudes y hasta esos defectos que dices tener —defectos que a mí me enamoran más cada día—. Me has mostrado también tus heridas y tus momentos difíciles, y aun así yo te elijo hoy, ayer y siempre. No cambiaría nada de ti, porque todo eso te hace ser tan única, tan hermosa y tan tú.
-Eres una persona fabulosa, fantástica, maravillosa, preciosa, amable, honrada, respetuosa, honesta y, sobre todo, profundamente amorosa. Gracias por permitirme demostrarte que puedo ser diferente a quienes te hicieron daño en el pasado. Yo, como tu pareja y protector, te prometo cuidarte toda la vida.
-Me enamoras cada día más con tu hermosa sonrisa, que me llena de esperanza, y con ese esfuerzo que haces por ser mejor que ayer. Me llena de orgullo verte crecer y seguir adelante. A veces pienso en lo que habría pasado si ese día hubiera sido el último para ti. No podría soportar la agonía ni la tristeza de haberte perdido. Solo recordar ese miedo me hace llorar, y por eso valoro tanto que hayas decidido quedarte a mi lado, aunque sé que estabas cansada.
-Sé que la vida te cerró esas preciosas alas muchas veces, que caíste intentando volver a abrirlas… pero ten la certeza de que estaré aquí para ayudarte a que brillen de nuevo. Yo veo en ti unas alas hermosas, llenas de luz. No sabes lo feliz que soy de tenerte en mi vida. Gracias infinitas por estar conmigo.
-Eres una gran novia, una gran hija, una gran amiga, una gran estudiante, una gran compañera. Siempre estaré para ti, así como tú has estado para mí. Estos tres meses se me han hecho lentos porque los he disfrutado al máximo; antes de conocerte, sentía que el tiempo se me escapaba sin sentido, pero contigo quiero empezar de nuevo. Gracias por darme tu mano; te prometo no soltarla nunca.
-Siempre estaré allí para ti: si alguna vez caes en el pozo del vacío, yo alzaré mi mano para mostrarte un nuevo amanecer, así como tú lo has hecho conmigo desde que llegaste a mi vida. Te amo demasiado, Lucía, y quiero una vida entera contigo. Le pido a Dios salud para ambos y que podamos un día estar juntos, felices, y sé que lo lograremos.
-Te amo muchísimo, Lucía, mi gran y único amor, mi solecito hermoso, mi niña preciosa. Protegeré tu vida hermosa con la mía, lo prometo. Te amo aquí y hasta la luna a paso de caracol.
-Te amo tanto como Zenitsu ama a Nezuko; te amo tanto como Iguro ama a Mitsuri; te amo como Hakuji ama a Koyuki; te amo como Rakan ama a Xayah; te amo como Emil ama a Ada; te amo como Rentarou ama a Kaoruko; te amo como Rengoku ama la comida; te amo como Eren ama a Mikasa; te amo tanto como Kaneki ama a Touka… te amo así y mucho más.
-Te amo, Lucía.
-Te amo, te amo, te amo. ♡♡♡
+    
+    <p>Mi amada Lucía: <br>
+    En esta celebración tan especial quiero comenzar esta carta para decirte, desde lo más profundo de mi corazón, cuánto te agradezco por todo este tiempo que me has hecho tan feliz. Te dedico estas palabras con una musiquita de Babymetal, esa banda que tanto te gusta, para que nos acompañe mientras las lees.</p>
 
-    </p>
+    <p>Quiero agradecerte por estos tres meses juntos, que para mí han sido los más hermosos del mundo. Me has mostrado muchas facetas de ti: tu confianza, tu amor, tus bellas virtudes y hasta esos defectos que dices tener —defectos que a mí me enamoran más cada día—. Me has mostrado también tus heridas y momentos difíciles, y aun así yo te elijo hoy, ayer y siempre. No cambiaría nada de ti, porque todo eso te hace ser tan única, tan hermosa y tan tú.</p>
+
+    <p>Eres una persona fabulosa, fantástica, maravillosa, preciosa, amable, honrada, respetuosa, honesta y, sobre todo, profundamente amorosa. Gracias por permitirme demostrarte que puedo ser diferente a quienes te hicieron daño en el pasado. Yo, como tu pareja y protector, te prometo cuidarte toda la vida.</p>
+
+    <p>Me enamoras cada día más con tu hermosa sonrisa, que me llena de esperanza, y con ese esfuerzo que haces por ser mejor que ayer. Me llena de orgullo verte crecer y seguir adelante. A veces pienso en lo que habría pasado si ese día hubiera sido el último para ti. No podría soportar la agonía ni la tristeza de haberte perdido. Solo recordar ese miedo me hace llorar, y por eso valoro tanto que hayas decidido quedarte a mi lado, aunque sé que estabas cansada.</p>
+
+    <p>Sé que la vida te cerró esas preciosas alas muchas veces, que caíste intentando volver a abrirlas… pero ten la certeza de que estaré aquí para ayudarte a que brillen de nuevo. Yo veo en ti unas alas hermosas, llenas de luz. No sabes lo feliz que soy de tenerte en mi vida. Gracias infinitas por estar conmigo.</p>
+
+    <p>Eres una gran novia, una gran hija, una gran amiga, una gran estudiante, una gran compañera. Siempre estaré para ti, así como tú has estado para mí. Estos tres meses se me han hecho lentos porque los he disfrutado al máximo; antes de conocerte, sentía que el tiempo se me escapaba sin sentido, pero contigo quiero empezar de nuevo. Gracias por darme tu mano; te prometo no soltarla nunca.</p>
+
+    <p>Siempre estaré allí para ti: si alguna vez caes en el pozo del vacío, yo alzaré mi mano para mostrarte un nuevo amanecer, así como tú lo has hecho conmigo desde que llegaste a mi vida. Te amo demasiado, Lucía, y quiero una vida entera contigo. Le pido a Dios salud para ambos y que podamos un día estar juntos, felices, y sé que lo lograremos.</p>
+
+    <p>Te amo muchísimo, Lucía, mi gran y único amor, mi solecito hermoso, mi niña preciosa. Protegeré tu vida hermosa con la mía, lo prometo. Te amo aquí y hasta la luna a paso de caracol.</p>
+
+    <p>Te amo tanto como Zenitsu ama a Nezuko; te amo tanto como Iguro ama a Mitsuri; te amo como Hakuji ama a Koyuki; te amo como Rakan ama a Xayah; te amo como Emil ama a Ada; te amo como Rentarou ama a Kaoruko; te amo como Rengoku ama la comida; te amo como Eren ama a Mikasa; te amo tanto como Kaneki ama a Touka… te amo así y mucho más.</p>
+
+    <p>Te amo, Lucía.<br>Te amo, te amo, te amo. ♡♡♡</p>
+
     <div class="adornos">✨🌸🎶</div>
   </div>
 
@@ -166,12 +172,13 @@ Te amo, te amo, te amo. ♡♡♡
     btnPlay.addEventListener("click", () => {
       if (musica.paused) {
         musica.play();
-        btnPlay.textContent = "⏸️"; // cambia icono
+        btnPlay.textContent = "⏸️";
       } else {
         musica.pause();
-        btnPlay.textContent = "▶️"; // cambia icono
+        btnPlay.textContent = "▶️";
       }
     });
   </script>
+
 </body>
 </html>
