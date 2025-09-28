@@ -125,6 +125,121 @@ header .logo {
 
     /* Corazones flotantes */
     .decoracion {
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para la novia más hermosa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a0000, #330000);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      scroll-behavior: smooth;
+      color: #f2f2f2;
+    }
+
+    /* Logo estilo BABYMETAL */
+    header .logo {
+      width: 120px;
+      margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      animation: girar 4s linear infinite;
+    }
+
+    @keyframes girar {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    header {
+      background: rgba(255, 0, 0, 0.15);
+      border: 2px solid #ff1a1a;
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ff1a1a;
+      margin: 20px auto;
+      max-width: 700px;
+      animation: aparecer 1.5s ease-in-out;
+    }
+
+    h1 {
+      margin: 0;
+      color: #ff3333;
+      text-shadow: 0 0 8px #ff1a1a;
+    }
+
+    .carta {
+      background: rgba(20, 0, 0, 0.8);
+      color: #fff;
+      max-width: 700px;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #ff1a1a;
+      box-shadow: 0 0 25px rgba(255,0,0,0.6);
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
+      line-height: 1.7;
+      text-align: justify;
+      animation: aparecer 2s ease-in-out;
+    }
+
+    .carta::before {
+      content: "";
+      position: absolute;
+      top: -2px; left: -2px;
+      right: -2px; bottom: -2px;
+      background: linear-gradient(45deg, #ff1a1a, #990000, #ff1a1a);
+      z-index: -1;
+      filter: blur(12px);
+      animation: brillo 6s linear infinite;
+    }
+
+    @keyframes brillo {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes aparecer {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .btn-musica {
+      margin: 30px auto;
+      background: #ff1a1a;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,0,0,0.6);
+      transition: transform 0.2s, background 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-musica:hover {
+      transform: scale(1.15) rotate(5deg);
+      background: #b30000;
+    }
+
+    .btn-musica:active {
+      transform: scale(0.95);
+    }
+
+    /* Corazones flotantes */
+    .decoracion {
       position: fixed;
       font-size: 2rem;
       animation: flotar 8s infinite;
@@ -139,40 +254,7 @@ header .logo {
       30% { opacity: 1; }
       100% { transform: translateY(-10vh) scale(1.4); opacity: 0; }
     }
-    /* Galería de imágenes */
-.galeria {
-  max-width: 700px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.galeria h2 {
-  color: #ff6666;
-  text-shadow: 0 0 6px #ff1a1a;
-}
-
-.galeria .imagenes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.galeria .imagenes img {
-  width: 45%; /* ajusta según la cantidad de fotos */
-  max-width: 300px;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255,0,0,0.5);
-  transition: transform 0.3s;
-}
-
-.galeria .imagenes img:hover {
-  transform: scale(1.05);
-}
-
-  </style>
+      </style>
 </head>
 <body>
   <header>
