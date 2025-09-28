@@ -138,11 +138,20 @@ h1 {
 
 .imagenes img {
   width: 100%;
-  border-radius: 12px;
-  border: 2px solid #ff1a1a;
-  box-shadow: 0 0 12px rgba(255,0,0,0.6);
-  transition: transform 0.3s;
+  max-width: 200px;   /* tamaño uniforme */
+  height: 200px;      /* todas cuadradas */
+  border-radius: 15px; /* bordes redondeados */
+  border: 3px solid #ff1a1a; /* marco rojo */
+  box-shadow: 0 0 15px rgba(255,0,0,0.6);
+  object-fit: cover;   /* centra la foto y recorta exceso */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.imagenes img:hover {
+  transform: scale(1.1); /* se acerca un poquito */
+  box-shadow: 0 0 25px rgba(255,0,0,0.9);
+}
+
 
 .imagenes img:hover {
   transform: scale(1.08);
