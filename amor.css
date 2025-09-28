@@ -137,20 +137,20 @@ h1 {
 }
 
 .imagenes img {
-  width: 100%;
-  max-width: 200px;   /* tamaño uniforme */
-  height: 200px;      /* todas cuadradas */
-  border-radius: 15px; /* bordes redondeados */
-  border: 3px solid #ff1a1a; /* marco rojo */
+  max-width: 200px;  /* límite de ancho */
+  width: 100%;       /* ocupa todo el espacio disponible */
+  height: auto;      /* mantiene proporción original */
+  border-radius: 15px;
+  border: 3px solid #ff1a1a;
   box-shadow: 0 0 15px rgba(255,0,0,0.6);
-  object-fit: cover;   /* centra la foto y recorta exceso */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .imagenes img:hover {
-  transform: scale(1.1); /* se acerca un poquito */
+  transform: scale(1.1);
   box-shadow: 0 0 25px rgba(255,0,0,0.9);
 }
+
 
 
 .imagenes img:hover {
