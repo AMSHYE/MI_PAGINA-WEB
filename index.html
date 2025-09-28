@@ -2,39 +2,102 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi página de noticia</title>
+  <title>Noticias con Estilo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
       margin: 0;
       padding: 0;
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
+
     header {
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+      animation: aparecer 1.5s ease-in-out;
     }
+
     h1 {
+      margin: 0;
       color: #333;
     }
+
     .noticia {
-      margin: 30px auto;
-      max-width: 600px;
       background: #fff;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+      max-width: 600px;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
       animation: aparecer 2s ease-in-out;
     }
+
+    /* Borde animado */
+    .noticia::before {
+      content: "";
+      position: absolute;
+      top: -2px; left: -2px;
+      right: -2px; bottom: -2px;
+      background: linear-gradient(45deg, #ff6a00, #ee0979, #ff6a00);
+      z-index: -1;
+      filter: blur(8px);
+      animation: brillo 6s linear infinite;
+    }
+
+    @keyframes brillo {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     @keyframes aparecer {
-      from {opacity: 0; transform: translateY(50px);}
+      from {opacity: 0; transform: translateY(30px);}
       to {opacity: 1; transform: translateY(0);}
     }
+
     .adornos {
-      margin-top: 20px;
-      font-size: 40px;
+      margin-top: 15px;
+      font-size: 1.8rem;
+      animation: saltar 2s infinite;
+    }
+
+    @keyframes saltar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Botón animado */
+    .btn-musica {
+      margin-top: 30px;
+      background: #ff6a00;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .btn-musica:hover {
+      transform: scale(1.1);
+      background: #ee0979;
+    }
+
+    .btn-musica:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
@@ -54,21 +117,24 @@
   <!-- Música de fondo -->
   <audio id="musica" autoplay loop>
     <source src="Amore - BABYMETAL.mp3" type="audio/mpeg">
-    Tu navegador no soporta el audio.
   </audio>
 
-  <!-- Botón para encender/apagar música -->
-  <button onclick="toggleMusic()">▶️ Pausar/Reproducir</button>
+  <!-- Botón con animación -->
+  <button id="btnPlay" class="btn-musica">▶️</button>
 
   <script>
     const musica = document.getElementById("musica");
-    function toggleMusic() {
+    const btnPlay = document.getElementById("btnPlay");
+
+    btnPlay.addEventListener("click", () => {
       if (musica.paused) {
         musica.play();
+        btnPlay.textContent = "⏸️"; // cambia icono
       } else {
         musica.pause();
+        btnPlay.textContent = "▶️"; // cambia icono
       }
-    }
+    });
   </script>
 </body>
 </html>
