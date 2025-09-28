@@ -123,6 +123,39 @@
       30% { opacity: 1; }
       100% { transform: translateY(-10vh) scale(1.4); opacity: 0; }
     }
+    /* Galería de imágenes */
+.galeria {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.galeria h2 {
+  color: #ff6666;
+  text-shadow: 0 0 6px #ff1a1a;
+}
+
+.galeria .imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.galeria .imagenes img {
+  width: 45%; /* ajusta según la cantidad de fotos */
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.galeria .imagenes img:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 <body>
