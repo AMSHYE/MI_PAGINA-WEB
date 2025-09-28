@@ -40,3 +40,128 @@
       animation: aparecer 2s ease-in-out;
       line-height: 1.6;
       text-align: justify;
+    }
+
+    /* Borde animado */
+    .noticia::before {
+      content: "";
+      position: absolute;
+      top: -2px; left: -2px;
+      right: -2px; bottom: -2px;
+      background: linear-gradient(45deg, #ff6a00, #ee0979, #ff6a00);
+      z-index: -1;
+      filter: blur(8px);
+      animation: brillo 6s linear infinite;
+    }
+
+    @keyframes brillo {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes aparecer {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .adornos {
+      margin-top: 15px;
+      font-size: 1.8rem;
+      animation: saltar 2s infinite;
+      text-align: center;
+    }
+
+    @keyframes saltar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Botón animado */
+    .btn-musica {
+      margin: 30px auto;
+      background: #ff6a00;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-musica:hover {
+      transform: scale(1.15) rotate(5deg);
+      background: #ee0979;
+    }
+
+    .btn-musica:active {
+      transform: scale(0.95);
+    }
+
+    /* Decoraciones flotantes */
+    .decoracion {
+      position: fixed;
+      font-size: 2rem;
+      animation: flotar 8s infinite;
+      opacity: 0.7;
+      z-index: -1;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+      30% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>♡♡ Felices 3 meses de novios ♡♡</h1>
+  </header>
+
+  <div class="noticia">
+    <h2>Cartita para la mujer que amo muchísimo 💌</h2>
+    <p>
+      <!-- Aquí va TODO tu texto largo -->
+      Para empezar esta carta que quiero darte por esta celebración...
+      (el resto de tu carta completa ✨)
+    </p>
+    <div class="adornos">✨🌸🎶</div>
+  </div>
+
+  <!-- Música de fondo -->
+  <audio id="musica" autoplay loop>
+    <source src="Amore - BABYMETAL.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Botón con animación -->
+  <button id="btnPlay" class="btn-musica">▶️</button>
+
+  <!-- Decoraciones flotantes -->
+  <div class="decoracion" style="left:10%; animation-delay:0s;">💖</div>
+  <div class="decoracion" style="left:30%; animation-delay:2s;">🌸</div>
+  <div class="decoracion" style="left:60%; animation-delay:4s;">✨</div>
+  <div class="decoracion" style="left:80%; animation-delay:6s;">💞</div>
+
+  <script>
+    const musica = document.getElementById("musica");
+    const btnPlay = document.getElementById("btnPlay");
+
+    btnPlay.addEventListener("click", () => {
+      if (musica.paused) {
+        musica.play();
+        btnPlay.textContent = "⏸️"; // cambia icono
+      } else {
+        musica.pause();
+        btnPlay.textContent = "▶️"; // cambia icono
+      }
+    });
+  </script>
+</body>
+</html>
