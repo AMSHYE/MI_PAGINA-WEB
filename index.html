@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi página de noticia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    .noticia {
+      margin: 30px auto;
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+      animation: aparecer 2s ease-in-out;
+    }
+    @keyframes aparecer {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .adornos {
+      margin-top: 20px;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📰 Noticias del Día</h1>
+  </header>
+
+  <div class="noticia">
+    <h2>Gran evento en la ciudad</h2>
+    <p>
+      Hoy se celebró un acontecimiento muy importante que reunió a cientos de personas...
+    </p>
+    <div class="adornos">✨🌸🎶</div>
+  </div>
+
+  <!-- Música de fondo -->
+  <audio id="musica" autoplay loop>
+    <source src="tu-cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+
+  <!-- Botón para encender/apagar música -->
+  <button onclick="toggleMusic()">▶️ Pausar/Reproducir</button>
+
+  <script>
+    const musica = document.getElementById("musica");
+    function toggleMusic() {
+      if (musica.paused) {
+        musica.play();
+      } else {
+        musica.pause();
+      }
+    }
+  </script>
+</body>
+</html>
