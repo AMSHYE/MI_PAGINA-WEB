@@ -67,6 +67,27 @@ h1 {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
 }
+.controles-musica {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* separación entre botones */
+  margin-top: 20px;
+}
+
+.btn-musica {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 10px red;
+}
+
+.btn-musica:hover {
+  background: darkred;
+}
 
 .btn-musica {
   margin: 30px auto;
@@ -92,7 +113,6 @@ h1 {
 
 .btn-musica:active {
   transform: scale(0.95);
-}
 
 .decoracion {
   position: fixed;
