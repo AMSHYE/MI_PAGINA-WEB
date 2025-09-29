@@ -208,24 +208,27 @@ header .logo {
   ];
   let indice = 0;
 
-  // Play / Pause
-  btnPlay.onclick = () => {
-    if (musica.paused) {
-      musica.play();
-      btnPlay.textContent = "⏸️";
-    } else {
-      musica.pause();
-      btnPlay.textContent = "▶️";
-    }
-  };
+  // Inicializar estado del botón
+btnPlay.textContent = musica.paused ? "▶️" : "⏸️";
 
-  // Next
-  btnNext.onclick = () => {
+// Play / Pause
+btnPlay.onclick = () => {
+    if (musica.paused) {
+        musica.play();
+        btnPlay.textContent = "⏸️";
+    } else {
+        musica.pause();
+        btnPlay.textContent = "▶️";
+    }
+};
+
+// Next
+btnNext.onclick = () => {
     indice = (indice + 1) % canciones.length;
     musica.src = canciones[indice];
     musica.play();
     btnPlay.textContent = "⏸️";
-  };
+};
 </script>
 
 
